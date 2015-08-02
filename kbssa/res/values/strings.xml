@@ -1,5 +1,12 @@
 <resources>
 
-    <string name="app_name">kbssa</string>
-
+    <string name="app_name">KBSSA</string>
+    <string name="digite_seu_nome_hint">Digite seu nome</string>
+    <string name="inserir_nome_label">Inserir</string>
+    <string name="no_notes">Não há relatórios para exibir.</string>
+    <string name="add_relatorio">Adicionar relatório</string>
+    <string name="data_hora_hint">Data e hora</string>
+    <string name="intensidade_hint">Intensidade da dor</string>
+	<string name="comentario_hint">Como você está se sentindo?</string>
+    <string name="relatorios">Relatórios</string>
 </resources>
