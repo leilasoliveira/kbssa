@@ -9,4 +9,11 @@
     <string name="intensidade_hint">Intensidade da dor</string>
 	<string name="comentario_hint">Como você está se sentindo?</string>
     <string name="relatorios">Relatórios</string>
+    <string name="email_hint">Seu e-mail</string>
+    <string name="email_medico_hint">E-mail do seu médico</string>
+    <string name="nome_medico_hint">Nome do seu médico</string>
+    <string name="salvar_button">Salvar</string>
+    <string name="configs">Configurações</string>
+    <string name="dados_pessoais_label">Dados pessoais</string>
+    <string name="dados_medicos_label">Dados médicos</string>
 </resources>

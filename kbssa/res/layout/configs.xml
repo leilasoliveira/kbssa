@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:text="@string/dados_pessoais_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        />
+    
+    <EditText 
+        android:id="@+id/email_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_hint"
+        />
+    
+    <TextView 
+        android:text="@string/dados_medicos_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        />
+    
+    <EditText 
+        android:id="@+id/nome_medico_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nome_medico_hint"
+        android:inputType="textPersonName"
+        />
+    
+    <EditText 
+        android:id="@+id/email_medico_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_medico_hint"
+        />
+
+    <Button 
+        android:id="@+id/salvar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salvar_button"
+        />
+</LinearLayout>

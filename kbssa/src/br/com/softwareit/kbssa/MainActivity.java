@@ -112,6 +112,9 @@ public class MainActivity extends ListActivity {
 		if(item.getItemId() == R.id.add_relatorio){
 			Intent intent = new Intent(this, AddRelatorioActivity.class);
 			startActivity(intent);
+		}else if(item.getItemId() == R.id.add_config){
+			Intent intent = new Intent(this, AddConfigsActivity.class);
+			startActivity(intent);
 		}
 		return super.onOptionsItemSelected(item);
 	}
