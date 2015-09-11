@@ -1,5 +1,7 @@
 package br.com.softwareit.kbssa;
 
+import br.com.softwareit.kbssa.builder.ConfigBuilder;
+import br.com.softwareit.kbssa.modelo.Configs;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -30,20 +32,26 @@ public class AddConfigsActivity extends Activity {
 		final EditText nome_medico_text = (EditText) findViewById(R.id.nome_medico_text);
 		final EditText email_medico_text = (EditText) findViewById(R.id.email_medico_text);
 		
+		email_medico_text.setText(prefs.getString(EMAIL_MEDICO, ""));
+		nome_medico_text.setText(prefs.getString(NOME_MEDICO, ""));
+		email_usuario_text.setText(prefs.getString(EMAIL_USUARIO, ""));
+		
 		Button saveButton = (Button) findViewById(R.id.salvar_button);
 		
 		saveButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				String email_usuario = email_usuario_text.getEditableText().toString();
-				String nome_medico = nome_medico_text.getEditableText().toString();
-				String email_medico = email_medico_text.getEditableText().toString();
+				Configs configs = new ConfigBuilder()
+						.emailDoMedico(email_medico_text.getEditableText().toString())
+						.nomeDoMedico(nome_medico_text.getEditableText().toString())
+						.emailDoUsuario(email_usuario_text.getEditableText().toString())
+						.build();
 				
 				Editor editor = prefs.edit();
-				editor.putString(EMAIL_USUARIO, email_usuario);
-				editor.putString(NOME_MEDICO, nome_medico);
-				editor.putString(EMAIL_MEDICO, email_medico);
+				editor.putString(EMAIL_USUARIO, configs.getEmailUsuario());
+				editor.putString(NOME_MEDICO, configs.getNomeMedico());
+				editor.putString(EMAIL_MEDICO, configs.getEmailMedico());
 				editor.commit();
 				
 				Toast.makeText(getApplicationContext(),
