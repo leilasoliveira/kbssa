@@ -20,12 +20,17 @@
         android:inputType="textCapSentences"
         />
     
-    <EditText 
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/intensidade_hint"
+        />
+    
+    <RatingBar 
         android:id="@+id/intensidade_text"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/intensidade_hint"
-        android:inputType="number"
+        android:numStars="5"
         />
     
     <Button 
